@@ -15,7 +15,7 @@
 #
 
 # inherit from common msm8937
-include device/lge/msm8937-common/BoardConfigCommon.mk
+include device/lge/msm8917-msm8937-msm8940-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/lge/sf340n
 
@@ -30,6 +30,9 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3892314112
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 25597819904
 BOARD_CACHEIMAGE_PARTITION_SIZE := 1291845632
 TARGET_USERIMAGES_USE_EXT4 := true
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # FM
 BOARD_HAVE_QCOM_FM := true

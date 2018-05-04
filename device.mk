@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GestureHandler
 
+# HWADDRS
+PRODUCT_PACKAGES += \
+    hwaddrs
+
 # NFC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \

@@ -36,3 +36,6 @@ ro.sys.fw.trim_enable_memory=2147483648
 # Audio
 ro.config.vc_call_vol_steps=7
 ro.config.vc_call_vol_default=7
+
+# Bluetooth
+ro.bt.bdaddr_path="/data/misc/bluetooth/bdaddr"
