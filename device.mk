@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/lge/sf340n/sf340n-vendor.mk)
 
 # common msm8937
-$(call inherit-product, device/lge/msm8937-common/msm8937.mk)
+$(call inherit-product, device/lge/sd4xx-common/sd4xx.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -32,6 +32,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
+
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -75,10 +78,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.power.rc \
+    init.class_main.sh \
     init.lge.bt.rc \
     init.lge.fingerprints.rc \
+    init.qcom.usb.rc \
+    init.lge.usb.sh \
+    init.lge.usb.default.sh \
     init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
     init.qcom.class_core.sh \
+    init.ph2n_core.rc \
     init.qcom.rc \
     init.qcom.sh \
     init.qcom.sensors.sh \
@@ -87,6 +96,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.lge.fm.rc \
     init.qcom.fm.sh \
+    ueventd.qcom.rc
+
 
 # Sensors
 PRODUCT_COPY_FILES += \

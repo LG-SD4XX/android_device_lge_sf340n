@@ -15,7 +15,7 @@
 #
 
 # inherit from common msm8937
-include device/lge/msm8917-msm8937-msm8940-common/BoardConfigCommon.mk
+include device/lge/sd4xx-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/lge/sf340n
 
