@@ -6,7 +6,7 @@ camera.display.umax=1920x1080
 camera.display.lmax=1280x720
 
 # display
-ro.sf.lcd_density=320
+ro.sf.lcd_density=480
 
 #HWUI properties
 ro.hwui.texture_cache_size=72
