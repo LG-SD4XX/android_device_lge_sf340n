@@ -1,8 +1,8 @@
-Device Tree for LG Stylo 2 Plus
+Device Tree for LG Stylo 3 Plus
 ==============================================
 
-The Stylo 2 Plus (codenamed _"ph2n"_) is a mid-range smartphone from Lg Electronics.
-It was released on June, 2016.
+The Stylo 3 Plus (codenamed _"sf340n"_) is a mid-range smartphone from Lg Electronics.
+It was released on June, 2017.
 
 Basic   | Spec Sheet
 -------:|:-------------------------
@@ -10,13 +10,13 @@ CPU     | 4 Cortex-A53 cores clocked at 1.5 GHz & 4 other Cortex-A53 cores clock
 Chipset | Qualcomm MSM8937 Snapdragon 430
 GPU     | Adreno 505
 Memory  | 2 GB RAM
-Android Version | 6.0.1
-Storage | 16 GB
+Android Version | 7.0.1
+Storage | 32 GB
 MicroSD | Up to 32 GB
 Battery | Removable Li-Ion 3000mAh battery
-Display | 720 x 1280 pixels, 5.7 inches (~294 ppi pixel density)
+Display | 1080 x 1920 pixels, 5.7 inches (~294 ppi pixel density)
 Camera  | 13 MP, autofocus, flash LED
 
 Copyright 2017-2018 - The Lineage Android Operating System.
 
-![Lg Stylo 2 Plus](http://4.bp.blogspot.com/-vTnhNAPuHSg/WFK4lnP9SlI/AAAAAAAAC00/RCnW-47sbngSB-nJdNEtU187rsuDMlDdQCK4B/s1600/1.jpg "Lg Stylo 2 Plus")
+![Lg Stylo 3 Plus](https://belacha.com/media/items/original/1506215796_6236.jpg "Lg Stylo 3 Plus")
