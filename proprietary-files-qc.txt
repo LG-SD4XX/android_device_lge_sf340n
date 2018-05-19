@@ -135,6 +135,7 @@ etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
 framework/com.qti.dpmframework.jar
 framework/dpmapi.jar
+framework/tcmclient.jar
 vendor/lib/libdpmctmgr.so
 vendor/lib/libdpmfdmgr.so
 vendor/lib/libdpmframework.so
@@ -269,107 +270,3 @@ vendor/lib/mediadrm/libwvdrmengine.so
 
 # Wi-fi
 bin/wcnss_service
-
-# Charger REMOVE
-bin/hvdcp_opti
-
-# Radio REMOVE
-bin/ipacm-diag
-bin/port-bridge
-vendor/lib/lib_drplugin_server.so
-
-# Graphics REMOVE
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
-etc/firmware/a420_pfp.fw
-etc/firmware/a420_pm4.fw
-etc/firmware/ice40.bin
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
-vendor/lib/libRSDriver_adreno.so
-vendor/lib/libquipc_os_api.so
-vendor/lib/libc2d30-a3xx.so
-vendor/lib/libc2d30-a4xx.so
-vendor/lib/libmm-qdcm.so
-
-# GPS REMOVE
-etc/flp.conf
-etc/gps.conf
-etc/izat.conf
-etc/lowi.conf
-etc/xtwifi.conf
-lib/hw/gps.default.so
-lib/libloc_core.so
-lib/libloc_eng.so
-lib/libloc_pla.so
-lib/libloc_stub.so
-lib/libgnsspps.so
-lib/libgps.utils.so
-vendor/bin/slim_daemon
-vendor/lib/libslimclient.so
-vendor/lib/libloc_externalDr.so
-
-# Preprossing REMOVE
-framework/com.qti.snapdragon.sdk.display.jar
-vendor/bin/mm-pp-dpps
-vendor/lib/libdisp-aba.so
-
-# Unused REMOVE
-framework/tcmclient.jar
-
-# Application Manager REMOVE
-vendor/bin/ntcode_listing.sh
-
-# Test mode REMOVE
-vendor/lib/mmi_audio.so
-vendor/lib/mmi_battery.so
-vendor/lib/mmi_bluetooth.so
-vendor/lib/mmi_camera.so
-vendor/lib/mmi_cpu.so
-vendor/lib/mmi_flashlight.so
-vendor/lib/mmi_fm.so
-vendor/lib/mmi_gps.so
-vendor/lib/mmi_headset.so
-vendor/lib/mmi_key.so
-vendor/lib/mmi_lcd.so
-vendor/lib/mmi_light.so
-vendor/lib/mmi_memory.so
-vendor/lib/mmi_nfc.so
-vendor/lib/mmi_sensor.so
-vendor/lib/mmi_sim.so
-vendor/lib/mmi_storage.so
-vendor/lib/mmi_sysinfo.so
-vendor/lib/mmi_touch.so
-vendor/lib/mmi_vibrator.so
-vendor/lib/mmi_wifi.so
-
-# Qualcomm wifi display REMOVE
-vendor/lib/libwfdavenhancements.so
-vendor/lib/libwfdcommonutils.so
-vendor/lib/libwfdhdcpcp.so
-vendor/lib/libwfdmmservice.so
-vendor/lib/libwfdmmsink.so
-vendor/lib/libwfdmmsrc.so
-vendor/lib/libwfdnative.so
-vendor/lib/libwfdrtsp.so
-vendor/lib/libwfdservice.so
-vendor/lib/libwfdsm.so
-vendor/lib/libwfduibcinterface.so
-vendor/lib/libwfduibcsink.so
-vendor/lib/libwfduibcsinkinterface.so
-vendor/lib/libwfduibcsrc.so
-vendor/lib/libwfduibcsrcinterface.so
-vendor/lib/libmmwfdinterface.so
-vendor/lib/libmmwfdsinkinterface.so
-vendor/lib/libmmwfdsrcinterface.so
-
-# Improvetouch REMOVE
-vendor/lib/libhbtpclient.so
-vendor/lib/libhbtpdsp.so
-vendor/lib/libhbtpfrmwk.so
-vendor/lib/libhbtpjni.so
