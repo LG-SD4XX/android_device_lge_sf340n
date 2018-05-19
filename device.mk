@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprintd
 
+    # GestureHandler
+PRODUCT_PACKAGES += \
+    GestureHandler
+
 # HWADDRS
 PRODUCT_PACKAGES += \
     hwaddrs
