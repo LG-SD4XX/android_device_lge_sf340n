@@ -11,6 +11,8 @@ etc/acdbdata/Speaker_cal.acdb
 bin/hci_qcomm_init
 vendor/lib/libbt-vendor.so
 vendor/lib/libbtnv.so
+vendor/lib64/libbt-vendor.so
+vendor/lib64/libbtnv.so
 
 # Bluetooth - Firmware
 etc/firmware/nvm_tlv.bin
@@ -321,6 +323,12 @@ vendor/lib/libSubSystemShutdown.so
 vendor/lib/libsubsystem_control.so
 vendor/lib/sensors.ssc.so
 vendor/lib/sensor_calibrate.so
+vendor/lib64/hw/activity_recognition.msm8937.so
+vendor/lib64/libsensor1.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/libsubsystem_control.so
+vendor/lib64/sensors.ssc.so
+vendor/lib64/sensor_calibrate.so
 
 # Subsystem restart
 #bin/ssr_diag

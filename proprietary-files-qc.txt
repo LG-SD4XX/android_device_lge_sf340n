@@ -28,8 +28,12 @@ vendor/lib/libscveTextReco.so
 vendor/lib/libscveTextRecoPostProcessing.so
 vendor/lib/libscveTextReco_stub.so
 vendor/lib/libsdsprpc.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libfastcvadsp_stub.so
+vendor/lib64/libfastcvopt.so
 
-# ADSP Modules
+# ADSP modules
 vendor/lib/rfsa/adsp/AlacDecoderModule.so.1
 vendor/lib/rfsa/adsp/ApeDecoderModule.so.1
 vendor/lib/rfsa/adsp/AudioSphereModule.so.1
@@ -89,9 +93,18 @@ vendor/lib/libswvdec.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbloader.so
+vendor/lib64/libacdbmapper.so
+vendor/lib64/libacdbrtac.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libaudiodevarb.so
+vendor/lib64/libhwdaphal.so
 
 # Blur
-#vendor/lib64/libuiblur.so
+vendor/lib64/libuiblur.so
 
 # CNE
 -priv-app/CNEService/CNEService.apk
@@ -125,6 +138,12 @@ vendor/lib/libcneqmiutils.so
 vendor/lib/libvendorconn.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
+vendor/lib64/libcne.so
+vendor/lib64/libcneapiclient.so
+vendor/lib64/libcneqmiutils.so
+vendor/lib64/libvendorconn.so
+vendor/lib64/libwqe.so
+vendor/lib64/libxml.so
 
 # DPM
 -priv-app/dpmserviceapp/dpmserviceapp.apk
@@ -141,6 +160,11 @@ vendor/lib/libdpmfdmgr.so
 vendor/lib/libdpmframework.so
 vendor/lib/libdpmnsrm.so
 vendor/lib/libdpmtcm.so
+vendor/lib64/libdpmctmgr.so
+vendor/lib64/libdpmfdmgr.so
+vendor/lib64/libdpmframework.so
+vendor/lib64/libdpmnsrm.so
+vendor/lib64/libdpmtcm.so
 
 # DRM
 bin/qseecomd
@@ -164,6 +188,22 @@ vendor/lib/libssd.so
 vendor/lib/libStDrvInt.so
 vendor/lib/libtzdrmgenprov.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
+vendor/lib64/lib-sec-disp.so
+vendor/lib64/libdrmfs.so
+vendor/lib64/libdrmtime.so
+vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel_svc.so
+vendor/lib64/libGPTEE.so
+vendor/lib64/libqisl.so
+vendor/lib64/libQSEEComAPI.so
+vendor/lib64/librpmb.so
+vendor/lib64/libsecureui.so
+vendor/lib64/libSecureUILib.so
+vendor/lib64/libsecureuisvc_jni.so
+vendor/lib64/libsecureui_svcsock.so
+vendor/lib64/libssd.so
+vendor/lib64/libStDrvInt.so
+vendor/lib64/libtzdrmgenprov.so
 
 # DSP
 vendor/lib/libfastrpc_aue_stub.so
@@ -171,9 +211,11 @@ vendor/lib/libfastrpc_utf_stub.so
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8937.so
+vendor/lib64/hw/gatekeeper.msm8937.so
 
 # Keystore
 vendor/lib/hw/keystore.msm8937.so
+vendor/lib64/hw/keystore.msm8937.so
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.msm8937.so
@@ -181,6 +223,8 @@ vendor/lib/libadpcmdec.so
 vendor/lib/liblistenjni.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libsmwrapper.so
+vendor/lib64/liblistenjni.so
+vendor/lib64/liblistensoundmodel2.so
 
 # Media
 etc/firmware/DE.o.msm8937
@@ -207,9 +251,9 @@ vendor/lib/libmmipstreamsourcehttp.so
 vendor/lib/libmmipstreamutils.so
 vendor/lib/libmmosal.so
 vendor/lib/libmmparser.so
+vendor/lib/libmmparser_lite.so
 vendor/lib/libmmrtpdecoder.so
 vendor/lib/libmmrtpencoder.so
-vendor/lib/libmmparser_lite.so
 vendor/lib/libMpeg4SwEncoder.so
 vendor/lib/libomx-dts.so
 vendor/lib/libOmxAacDec.so
@@ -223,15 +267,39 @@ vendor/lib/libOmxMux.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxWmaDec.so
+vendor/lib64/libAlacSwDec.so
+vendor/lib64/libApeSwDec.so
+vendor/lib64/libFlacSwDec.so
+vendor/lib64/libI420colorconvert.so
+vendor/lib64/libmm-color-convertor.so
+vendor/lib64/libmmosal.so
+vendor/lib64/libmmsw_detail_enhancement.so
+vendor/lib64/libmmsw_math.so
+vendor/lib64/libmmsw_opencl.so
+vendor/lib64/libmmsw_platform.so
+vendor/lib64/libMpeg4SwEncoder.so
+vendor/lib64/libOmxAacDec.so
+vendor/lib64/libOmxAlacDec.so
+vendor/lib64/libOmxAlacDecSw.so
+vendor/lib64/libOmxAmrwbplusDec.so
+vendor/lib64/libOmxApeDec.so
+vendor/lib64/libOmxApeDecSw.so
+vendor/lib64/libOmxEvrcDec.so
+vendor/lib64/libOmxMux.so
+vendor/lib64/libOmxQcelp13Dec.so
+vendor/lib64/libOmxWmaDec.so
 
 # Modem
 vendor/lib/libwms.so
+vendor/lib64/libwms.so
 
 # Network
 -priv-app/QtiTetherService/QtiTetherService.apk
 vendor/lib/libconnctrl.so
 vendor/lib/libcsm_data.so
 vendor/lib/libQtiTether.so
+vendor/lib64/libconnctrl.so
+vendor/lib64/libQtiTether.so
 
 # Perf
 bin/iop
@@ -248,22 +316,31 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-wl.so
 vendor/lib/libqti_performance.so
 vendor/lib/libwbc_jni.so
+vendor/lib64/libqti-at.so
+vendor/lib64/libqti-iop-client.so
+vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-wl.so
 
 # Peripheral manager
 bin/pm-proxy
 bin/pm-service
 vendor/lib/libperipheral_client.so
+vendor/lib64/libperipheral_client.so
 
 # Thermal
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
+vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalioctl.so
 
 # Time services
 -app/TimeService/TimeService.apk
 bin/time_daemon
 vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
+vendor/lib64/libTimeService.so
+-vendor/lib64/libtime_genoff.so
 
 # Widevine
 vendor/lib/mediadrm/libwvdrmengine.so
