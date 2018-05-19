@@ -39,6 +39,7 @@ lib/libmmcamera_interface.so
 lib/libmmjpeg_interface.so
 #lib/libmorpho_image_stab31.so
 lib/libqomx_core.so
+lib/libSJlowlight.so
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_front.so
 vendor/lib/libflash_pmic.so

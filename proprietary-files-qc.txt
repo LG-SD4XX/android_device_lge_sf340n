@@ -231,9 +231,7 @@ etc/firmware/DE.o.msm8937
 lib/libOmxSwVdec.so
 lib/libOmxSwVencMpeg4.so
 lib/libOmxVpp.so
-lib/libSJlowlight.so
 lib/libvpplibrary.so
-vendor/lib/lib-dplmedia.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libDxHdcp.so
