@@ -247,10 +247,8 @@ vendor/lib/libmmcamera_isp_template.so
 vendor/lib/libmmcamera_isp_wb40.so
 
 # Fingerprint
-bin/fidod
 bin/fingerprintd
 lib/hw/fingerprint.msm8937.so
-lib/libfidoservice_binder.so
 lib/libfpfactory.so
 lib/libfpfactory_jni.so
 lib/libgf_algo.so
@@ -258,12 +256,7 @@ lib/libgf_ca.so
 lib/libgf_hal.so
 
 # FM
-bin/fmconfig
-bin/fmfactorytest
-bin/fmfactorytestserver
 bin/fm_qsoc_patches
-framework/qcom.fmradio.jar
-lib/libqcomfm_jni.so
 
 # NFC
 vendor/firmware/libpn548ad_fw.so
