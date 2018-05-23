@@ -24,6 +24,8 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+on early-fs
+    chmod 666 /dev/goodix_fp
 
 on boot
     # Feature chip vendor : qct
@@ -35,6 +37,23 @@ on boot
     # SCMS-T property set during phone Booting
     setprop persist.service.bdroid.a2dp_con 0
     setprop persist.service.bdroid.scms_t 0
+
+    # improving first Touch response by i2c active
+    write /sys/devices/soc/78b7000.i2c/power/control on
+
+    # LG touchscreen features
+    chown system system /sys/devices/virtual/input/lge_touch/debug_option
+    chmod 664 /sys/devices/virtual/input/lge_touch/debug_option
+    chown system system /sys/devices/virtual/input/lge_touch/debug_tool
+    chmod 664 /sys/devices/virtual/input/lge_touch/debug_tool
+    chown system system /sys/devices/virtual/input/lge_touch/finger_amplitude
+    chmod 664 /sys/devices/virtual/input/lge_touch/finger_amplitude
+    chown system system /sys/devices/virtual/input/lge_touch/qmemo_status
+    chmod 664 /sys/devices/virtual/input/lge_touch/qmemo_status
+    chown system system /sys/devices/virtual/input/lge_touch/pmemo_status
+    chmod 664 /sys/devices/virtual/input/lge_touch/pmemo_status
+    chown system system /sys/devices/virtual/input/lge_touch/sensing_test
+    chmod 664 /sys/devices/virtual/input/lge_touch/sensing_test
 
 service bdaddr_loader /system/bin/bdaddr_loader
     class late_start
