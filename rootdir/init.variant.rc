@@ -67,3 +67,12 @@ service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     group system
     disabled
     oneshot
+
+# Enable Fast Charge
+on charger
+    start hvdcp_opti
+
+service hvdcp_opti /system/bin/hvdcp_opti
+    class main
+    user root
+    group root
