@@ -38,6 +38,9 @@ on boot
     setprop persist.service.bdroid.a2dp_con 0
     setprop persist.service.bdroid.scms_t 0
 
+    # Enable hvdcp
+    setprop persist.hvdcp.allow_opti 1
+
     # improving first Touch response by i2c active
     write /sys/devices/soc/78b7000.i2c/power/control on
 
@@ -54,9 +57,6 @@ on boot
     chmod 664 /sys/devices/virtual/input/lge_touch/pmemo_status
     chown system system /sys/devices/virtual/input/lge_touch/sensing_test
     chmod 664 /sys/devices/virtual/input/lge_touch/sensing_test
-
-on property:sys.boot_completed=1
-    setprop persist.hvdcp.allow_opti 1
 
 service bdaddr_loader /system/bin/bdaddr_loader
     class late_start
@@ -78,4 +78,4 @@ on charger
 service hvdcp_opti /system/bin/hvdcp_opti
     class main
     user root
-    group root
+    group system wakelock
