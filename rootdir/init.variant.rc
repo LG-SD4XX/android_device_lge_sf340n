@@ -34,6 +34,41 @@ on boot
     # Enable AVRCP Browsing
     setprop persist.service.avrcp.browsing 1
 
+    service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
+    class late_start
+    user root
+    group system
+    disabled
+    oneshot
+
+on boot
+    setprop ro.fm.module QCT
+    
+   # Graphics 
+   chown system system /sys/class/panel/img_tune/image_enhance_set
+   chmod 664 /sys/class/panel/img_tune/image_enhance_set
+   
+    #Fingerprint
+   chown system input /sys/devices/virtual/input/lge_fingerprint/testmode
+   chown system input /sys/devices/virtual/input/lge_fingerprint/spitest
+   chown system input /sys/devices/virtual/input/lge_fingerprint/zonetest
+   chown system input /sys/devices/virtual/input/lge_fingerprint/checkerbdtest
+   chown system input /sys/devices/virtual/input/lge_fingerprint/rubbertest
+   chown system input /sys/devices/virtual/input/lge_fingerprint/intstatus
+   chown system input /sys/devices/virtual/input/lge_fingerprint/qup_id
+   chown system input /sys/devices/virtual/input/lge_fingerprint/waitfinger
+   chown system input /sys/devices/virtual/input/lge_fingerprint/spi_prepare
+
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/testmode
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/spitest
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/zonetest
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/checkerbdtest
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/rubbertest
+   chmod 0440 /sys/devices/virtual/input/lge_fingerprint/intstatus
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/qup_id
+   chmod 0220 /sys/devices/virtual/input/lge_fingerprint/waitfinger
+   chmod 0660 /sys/devices/virtual/input/lge_fingerprint/spi_prepare
+
     # SCMS-T property set during phone Booting
     setprop persist.service.bdroid.a2dp_con 0
     setprop persist.service.bdroid.scms_t 0
@@ -57,19 +92,53 @@ on boot
     chmod 664 /sys/devices/virtual/input/lge_touch/pmemo_status
     chown system system /sys/devices/virtual/input/lge_touch/sensing_test
     chmod 664 /sys/devices/virtual/input/lge_touch/sensing_test
+    chown system system /sys/devices/virtual/input/lge_touch/lpwg_notify
+    chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
+
+    # Camera debug
+    chown system system /sys/kernel/debug/camera/logsync
+    chmod 0664 /sys/kernel/debug/camera/logsync
 
 service bdaddr_loader /system/bin/bdaddr_loader
     class late_start
     user root
-    group bluetooth net_bt_admin
+    group bluetooth
     oneshot
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
-    class late_start
-    user root
-    group system
-    disabled
+service config_bt_addr /system/bin/bdaddr_loader -O
+    class core
+    user bluetooth
+    group bluetooth radio
     oneshot
+
+# QMUX must be in multiple groups to support external process connections
+service qmuxd /system/bin/qmuxd
+    class main
+    user root
+    group radio audio bluetooth gps qcom_diag
+    
+on post-fs-data
+   # make factory test result directory
+   mkdir /sns/fingerprint 0775 system system
+
+## Disable for now ##
+# fingerprintd
+service fingerprintd /system/vendor/bin/fingerprintd
+    class main
+    user system
+    group system input
+
+on property:sys.boot_completed=1
+    setprop sys.use.fifo_ui 1
+    setprop ro.config.max_starting_bg 32
+    setprop ro.sys.fw.bg_apps_limit 64
+    setprop ro.sys.fw.bg_cached_ratio 0.5
+    setprop ro.sys.fw.mOomMinFree1 73728
+    setprop ro.sys.fw.mOomMinFree2 92160
+    setprop ro.sys.fw.mOomMinFree3 110592
+    setprop ro.sys.fw.mOomMinFree4 153600
+    setprop ro.sys.fw.mOomMinFree5 245760
+    setprop ro.sys.fw.mOomMinFree6 428468
 
 # Enable Fast Charge
 on charger

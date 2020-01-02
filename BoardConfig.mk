@@ -1,11 +1,11 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,33 +14,12 @@
 # limitations under the License.
 #
 
-# inherit from common sd4xx-common
-include device/lge/sd4xx-common/BoardConfigCommon.mk
+DEVICE_PATH := device/lge/sf340n
 
-LOCAL_PATH := device/lge/sf340n
+TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
 
-# kernel
-TARGET_KERNEL_CONFIG := lineage_sf340n_defconfig
+# Inherit device-specific board fragments
+include $(DEVICE_PATH)/board/*.mk
 
-# Filesystem
-BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
-BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3892314112
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 25597819904
-BOARD_CACHEIMAGE_PARTITION_SIZE := 1291845632
-TARGET_USERIMAGES_USE_EXT4 := true
-
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
-
-# NFC
-BOARD_NFC_CHIPSET := pn548
-BOARD_NFC_DEVICE := "/dev/pn547"
-
-# Properties
-TARGET_SYSTEM_PROP += $(LOCAL_PATH)/system.prop
-
-# inherit from the proprietary version
+# Inherit the proprietary files
 -include vendor/lge/sf340n/BoardConfigVendor.mk
--include device/lge/common/BoardConfigCommon.mk
