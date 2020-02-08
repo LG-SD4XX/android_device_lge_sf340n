@@ -940,8 +940,8 @@
 
     <path name="voice-headset-mic">
         <path name="headset-mic" />
-        <ctl name="ADC2 Volume" value="6" />
-        <ctl name="DEC1 Volume" value="84" />
+        <ctl name="ADC2 Volume" value="7" />
+        <ctl name="DEC1 Volume" value="91" />
     </path>
 
     <path name="speaker-and-headphones">
@@ -1164,14 +1164,14 @@
 <!--  LGE Add Devices -->
 	<path name="handset-mic-vr">
         <path name="handset-mic" />
-        <ctl name="ADC1 Volume" value="7" />
-        <ctl name="DEC1 Volume" value="91" />
+        <ctl name="ADC1 Volume" value="8" />
+        <ctl name="DEC1 Volume" value="93" />
     </path>
 
     <path name="headset-mic-vr">
         <path name="headset-mic" />
-        <ctl name="ADC2 Volume" value="8" />
-        <ctl name="DEC1 Volume" value="91" />
+        <ctl name="ADC2 Volume" value="9" />
+        <ctl name="DEC1 Volume" value="93" />
     </path>
 	<path name="loopback-earpiece">
         <ctl name="RX1 MIX1 INP1" value="RX1" />
@@ -1214,7 +1214,7 @@
         <path name="adc2" />
         <ctl name="ADC2 MUX" value="INP2" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="DEC1 Volume" value="80" />
+        <ctl name="DEC1 Volume" value="85" />
     </path>
 
     <path name="loopback-bt">
@@ -1553,8 +1553,8 @@
 
     <path name="headset-camcorder-mic">
         <path name="headset-mic" />
-        <ctl name="ADC2 Volume" value="7" />
-        <ctl name="DEC1 Volume" value="85" />
+        <ctl name="ADC2 Volume" value="8" />
+        <ctl name="DEC1 Volume" value="91" />
     </path>
 
 <!-- Add from p1 !-->
@@ -1696,8 +1696,8 @@
 
     <path name="voip-headset-mic">
         <path name="headset-mic" />
-        <ctl name="ADC2 Volume" value="6" />
-        <ctl name="DEC1 Volume" value="84" />
+        <ctl name="ADC2 Volume" value="7" />
+        <ctl name="DEC1 Volume" value="91" />
     </path>
 
 </mixer>

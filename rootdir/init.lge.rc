@@ -31,6 +31,19 @@ import init.qcom.power.rc
 import init.variant.rc
 
 on boot
+
+    start rmt_storage
+    insmod /system/lib/modules/adsprpc.ko
+# access permission for secure touch
+    chmod 0660 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
+    chmod 0440 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
+    chmod 0660 /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
+    chmod 0440 /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
+    chown system drmrpc /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
+    chown system drmrpc /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
+    chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
+    chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
+    
     # For setting tcp delayed ack
     chown system system /proc/sys/net/ipv4/tcp_delack_seg
     chown system system /proc/sys/net/ipv4/tcp_use_userconfig
@@ -96,6 +109,7 @@ on post-fs-data
 
    # make factory test result directory
    mkdir /sns/fingerprint 0775 system system
+   mkdir /persist-lg/kmstore 0770 system system
 
    # led
    chown system system /sys/devices/virtual/lg_rgb_led/use_patterns/blink_patterns

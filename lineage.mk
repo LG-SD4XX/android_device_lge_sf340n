@@ -39,7 +39,7 @@ TARGET_VENDOR_PRODUCT_NAME := sf340n
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="sf340n" \
     PRODUCT_NAME="sf340n" \
-    PRIVATE_BUILD_DESC="sf340n_tmo_us-user 7.1.2 NRD90U 171071514d722 release-keys" \
-    BUILD_FINGERPRINT="MetroPCS/sf340n_mpcs_us/sf340n:7.1.2/NRD90U/171071514d722:user/release-keys" \
-    PRIVATE_BUILD_DESC="sf340n_mpcs_us-user 7.1.2 NRD90U 171071514d722 release-keys"
+    PRIVATE_BUILD_DESC="sf340n_tmo_us-user 7.0 NRD90U 1723312232a11 release-keys" \
+    BUILD_FINGERPRINT="lge/sf340n_tmo_us/sf340n:7.0/NRD90U/1723312232a11:user/release-keys" \
+    PRIVATE_BUILD_DESC="sf340n_tmo_us-user 7.0 NRD90U 1723312232a11 release-keys"
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop

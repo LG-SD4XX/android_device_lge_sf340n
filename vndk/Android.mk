@@ -1,6 +1,8 @@
 VNDK_SP_LIBRARIES := \
+    android.hardware.camera.device@1.0 \
     android.hardware.graphics.allocator@2.0 \
     android.hardware.graphics.common@1.0 \
+    android.hardware.graphics.composer@2.1 \
     android.hardware.graphics.mapper@2.0 \
     android.hardware.renderscript@1.0 \
     android.hidl.memory@1.0 \
@@ -14,6 +16,7 @@ VNDK_SP_LIBRARIES := \
     libc++ \
     libcompiler_rt \
     libcutils \
+    libfmq \
     libft2 \
     libhardware \
     libhidlbase \

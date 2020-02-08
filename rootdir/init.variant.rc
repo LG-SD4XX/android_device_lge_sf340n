@@ -44,8 +44,12 @@ on boot
 on boot
     setprop ro.fm.module QCT
     
+    #enable camera read sensors data
+    setprop persist.camera.gyro.disable 0
+    
    # Graphics 
    chown system system /sys/class/panel/img_tune/image_enhance_set
+   chown system.system /sys/devices/virtual/graphics/fb0/reader_mode
    chmod 664 /sys/class/panel/img_tune/image_enhance_set
    
     #Fingerprint
@@ -94,6 +98,17 @@ on boot
     chmod 664 /sys/devices/virtual/input/lge_touch/sensing_test
     chown system system /sys/devices/virtual/input/lge_touch/lpwg_notify
     chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
+    
+    # improving first Touch response by i2c active
+    write /sys/devices/soc/78b7000.i2c/power/control on
+
+#RED LED Indicator
+    chown system system /sys/class/leds/red/pattern_id
+    chmod 0664 /sys/class/leds/red/pattern_id
+    chown system system /sys/class/leds/red/timed
+    chmod 0664 /sys/class/leds/red/timed
+    chown system system /sys/class/leds/red/time_on_off
+    chmod 0664 /sys/class/leds/red/time_on_off
 
     # Camera debug
     chown system system /sys/kernel/debug/camera/logsync
@@ -118,10 +133,21 @@ service qmuxd /system/bin/qmuxd
     group radio audio bluetooth gps qcom_diag
     
 on post-fs-data
+chown system system /persist-lg
+   chmod 0771 /persist-lg
+
+   chown system system /sns
+   chmod 0755 /sns
    # make factory test result directory
    mkdir /sns/fingerprint 0775 system system
+   
+# enable exfat feature
+	insmod /system/lib/modules/texfat.ko   
+    
+# NFC: create data/nfc for nv storage
+    mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/nfc/param 0770 nfc nfc
 
-## Disable for now ##
 # fingerprintd
 service fingerprintd /system/vendor/bin/fingerprintd
     class main
